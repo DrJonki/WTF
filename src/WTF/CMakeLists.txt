@@ -22,6 +22,8 @@ set(SRC
   ${SRCDIR}/Randomizer.cpp
 )
 
+include(${CMAKE_SOURCE_DIR}/src/Game/CMakeLists.txt)
+
 add_executable(WTF ${SRC})
 add_dependencies(WTF SFML GLM JSON)
 add_definitions(-DSFML_STATIC)

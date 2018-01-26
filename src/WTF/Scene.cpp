@@ -7,8 +7,7 @@ namespace wtf
   Scene::Scene(Instance& ins)
     : m_instance(ins),
       m_layers()
-  {
-  }
+  {}
 
   Scene::~Scene()
   {}
