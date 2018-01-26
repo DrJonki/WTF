@@ -61,5 +61,5 @@ namespace wtf
   };
 
   // Include the template implementation file
-  #include <Jam/Util/Randomizer.inl>
+  #include <WTF/Util/Randomizer.inl>
 }

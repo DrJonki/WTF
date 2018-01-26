@@ -1,4 +1,4 @@
-#include <Jam/System/Config.hpp>
+#include <WTF/System/Config.hpp>
 #include <fstream>
 #include <cassert>
 #include <string>

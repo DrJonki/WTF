@@ -1,5 +1,5 @@
-#include <Jam/Layer.hpp>
-#include <Jam/Entity.hpp>
+#include <WTF/Layer.hpp>
+#include <WTF/Entity.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 
 namespace wtf

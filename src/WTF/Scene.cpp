@@ -1,5 +1,5 @@
-#include <Jam/Scene.hpp>
-#include <Jam/Layer.hpp>
+#include <WTF/Scene.hpp>
+#include <WTF/Layer.hpp>
 #include <cassert>
 
 namespace wtf

@@ -1,6 +1,6 @@
 #include <WTF/System/Engine.hpp>
 
-namespace jam
+namespace wtf
 {
   Instance::Instance()
   {

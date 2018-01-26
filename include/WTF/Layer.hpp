@@ -3,7 +3,7 @@
 #include <memory>
 #include <vector>
 #include <unordered_map>
-#include <Jam/Entity.hpp>
+#include <WTF/Entity.hpp>
 #include <SFML/Graphics/View.hpp>
 #include <SFML/Graphics/Transformable.hpp>
 
@@ -44,6 +44,6 @@ namespace wtf
     bool m_active;
   };
 
-  #include <Jam/Layer.inl>
+  #include <WTF/Layer.inl>
 }
 

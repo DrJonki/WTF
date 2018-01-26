@@ -1,6 +1,6 @@
-#include <Jam/Util/Randomizer.hpp>
+#include <WTF/Util/Randomizer.hpp>
 
-namespace jam
+namespace wtf
 {
   Randomizer::Randomizer()
     : m_randomGenerator(std::random_device()())

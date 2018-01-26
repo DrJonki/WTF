@@ -1,8 +1,9 @@
-#include <Jam/ResourceManager.hpp>
+#include <WTF/System/Resource.hpp>
 #include <iostream>
 #include <cassert>
 
-namespace jam {
+namespace wtf
+{
     sf::Texture& ResourceManager::GetTexture(const std::string& filePath)
     {
         std::string assetPath = "assets/Textures/" + filePath;

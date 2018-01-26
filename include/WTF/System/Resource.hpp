@@ -5,9 +5,9 @@
 #include <SFML/Graphics/Font.hpp>
 #include <SFML/Graphics/Shader.hpp>
 
-namespace jam
+namespace wtf
 {
-  class ResourceManager
+  class Resource
   {
     public:
 
