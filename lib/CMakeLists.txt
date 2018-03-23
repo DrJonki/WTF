@@ -29,10 +29,12 @@ source_group("Scene" FILES ${SRC_SCENE})
 set(SRC_SYSTEM
   ${INCDIR}/System/Engine.hpp
   ${INCDIR}/System/Config.hpp
+  ${INCDIR}/System/Network.hpp
   ${INCDIR}/System/Resource.hpp
 
   ${SRCDIR}/System/Engine.cpp
   ${SRCDIR}/System/Config.cpp
+  ${SRCDIR}/System/Network.cpp
   ${SRCDIR}/System/Resource.cpp
 )
 source_group("System" FILES ${SRC_SYSTEM})
