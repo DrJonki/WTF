@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string>
+
 namespace sf
 {
   class Texture;

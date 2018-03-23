@@ -4,6 +4,7 @@
 #include <SFML/Graphics/Font.hpp>
 #include <iostream>
 #include <cassert>
+#include <unordered_map>
 
 namespace
 {
@@ -14,7 +15,7 @@ namespace
 
 namespace wtf
 {
-  sf::Texture& ResourceManager::GetTexture(const std::string& path)
+  sf::Texture& Resource::texture(const std::string& path)
   {
     const std::string assetPath = "assets/Textures/" + path;
     auto itr = ns_textures.find(assetPath);
@@ -31,9 +32,9 @@ namespace wtf
     return itr->second;
   }
 
-  sf::SoundBuffer& ResourceManager::GetSoundBuffer(const std::string& path)
+  sf::SoundBuffer& Resource::soundBuffer(const std::string& path)
   {
-    std::string assetPath = "assets/Audio/" + filePath;
+    std::string assetPath = "assets/Audio/" + path;
 
     auto itr = ns_soundbuffers.find(assetPath);
 
@@ -49,9 +50,9 @@ namespace wtf
     return itr->second;
   }
 
-  sf::Font& ResourceManager::GetFont(const std::string& path)
+  sf::Font& Resource::font(const std::string& path)
   {
-    std::string assetPath = "assets/Fonts/" + filePath;
+    std::string assetPath = "assets/Fonts/" + path;
     auto itr = ns_fonts.find(assetPath);
 
     if (itr == ns_fonts.end()) {

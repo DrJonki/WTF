@@ -3,6 +3,7 @@
 #include <cassert>
 #include <string>
 #include <sstream>
+#include <unordered_map>
 
 namespace
 {
@@ -11,7 +12,7 @@ namespace
 
 namespace wtf
 {
-  ConfigManager::ensureInit()
+  void Config::ensureInit()
   {
     static bool init = false;
 
@@ -37,7 +38,7 @@ namespace wtf
   }
 
   template<>
-  std::string ConfigManager::get(const std::string& key)
+  std::string Config::get(const std::string& key)
   {
     ensureInit();
 
@@ -48,19 +49,19 @@ namespace wtf
   }
 
   template<>
-  int ConfigManager::get(const std::string& key) const
+  int Config::get(const std::string& key)
   {
     return std::atoi(get<std::string>(key).c_str());
   }
 
   template<>
-  float ConfigManager::get(const std::string& key) const
+  float Config::get(const std::string& key)
   {
     return static_cast<float>(std::atof(get<std::string>(key).c_str()));
   }
 
   template<>
-  bool ConfigManager::get(const std::string& key) const
+  bool Config::get(const std::string& key)
   {
     return get<std::string>(key) == "true";
   }

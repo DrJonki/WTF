@@ -3,5 +3,7 @@
 int main() {
   wtf::Engine eng;
 
-  return eng();
+  eng();
+
+  return 0;
 }

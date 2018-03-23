@@ -1,5 +1,6 @@
 #pragma once
 
+#include <SFML/Graphics/Sprite.hpp>
 #include <string>
 
 namespace sf
@@ -33,11 +34,11 @@ namespace wtf
 
     void baseUpdate(const float dt);
 
-    void baseDraw(sf::RenderTarget& target);
+    void baseDraw(sf::RenderTarget& target) const;
 
     virtual void update(const float dt);
 
-    virtual void draw(sf::RenderTarget& target);
+    virtual void draw(sf::RenderTarget& target) const;
 
   private:
 

@@ -1,11 +1,11 @@
 #pragma once
 
+#include <WTF/Scene/Entity.hpp>
+#include <SFML/Graphics/View.hpp>
+#include <SFML/Graphics/Transformable.hpp>
 #include <memory>
 #include <vector>
 #include <unordered_map>
-#include <WTF/Entity.hpp>
-#include <SFML/Graphics/View.hpp>
-#include <SFML/Graphics/Transformable.hpp>
 
 namespace sf
 {
@@ -29,7 +29,7 @@ namespace wtf
 
     void draw(sf::RenderTarget& target);
 
-    void setView(const sf::View& view);
+    void setView(const sf::View* const view);
 
     const sf::View& getView() const;
 
@@ -40,10 +40,10 @@ namespace wtf
   private:
 
     std::unordered_multimap<std::string, std::unique_ptr<Entity>> m_entities;
-    sf::View m_view;
+    const sf::View* m_view;
+    sf::View m_defaultView;
     bool m_active;
   };
 
-  #include <WTF/Layer.inl>
+  #include <WTF/Scene/Layer.inl>
 }
-

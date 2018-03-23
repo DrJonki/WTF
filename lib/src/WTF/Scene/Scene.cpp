@@ -1,12 +1,11 @@
-#include <WTF/Scene.hpp>
-#include <WTF/Layer.hpp>
+#include <WTF/Scene/Scene.hpp>
+#include <WTF/Scene/Layer.hpp>
 #include <cassert>
 
 namespace wtf
 {
-  Scene::Scene(Instance& ins)
-    : m_instance(ins),
-      m_layers()
+  Scene::Scene()
+    : m_layers()
   {}
 
   Scene::~Scene()
@@ -35,14 +34,9 @@ namespace wtf
     }
   }
 
-  const Instance& Scene::getInstance() const
+  sf::View & Scene::getView()
   {
-    return m_instance;
-  }
-
-  void Scene::setView(const sf::View& view)
-  {
-    m_view = view;
+    return m_view;
   }
 
   const sf::View& Scene::getView() const

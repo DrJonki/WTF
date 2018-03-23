@@ -1,9 +1,9 @@
 #pragma once
 
-#include <memory>
-#include <map>
 #include <SFML/Graphics/View.hpp>
 #include <rapidjson/document.h>
+#include <map>
+#include <memory>
 
 namespace sf
 {
@@ -18,7 +18,7 @@ namespace wtf
   {
   public:
 
-    Scene(Instance& ins);
+    Scene();
 
     virtual ~Scene() = 0;
 
@@ -28,7 +28,7 @@ namespace wtf
 
     virtual void draw(sf::RenderTarget& target);
 
-    void setView(const sf::View& view);
+    sf::View& getView();
 
     const sf::View& getView() const;
 

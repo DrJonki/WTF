@@ -1,6 +1,6 @@
 #pragma once
 
-#include <WTF/Macros>
+#include <WTF/Macros.hpp>
 #include <SFML/System/Clock.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 
@@ -8,9 +8,9 @@ namespace wtf
 {
   class Scene;
 
-  class Instance final
+  class Engine final
   {
-    WTF_NO_COPY;
+    WTF_NO_COPY(Engine);
 
   public:
 

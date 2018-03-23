@@ -1,4 +1,4 @@
-#include <WTF/Entity.hpp>
+#include <WTF/Scene/Entity.hpp>
 
 namespace wtf
 {
@@ -28,7 +28,7 @@ namespace wtf
     }
   }
 
-  void Entity::baseDraw(sf::RenderTarget& target)
+  void Entity::baseDraw(sf::RenderTarget& target) const
   {
     if (isActive()) {
       draw(target);
@@ -38,7 +38,7 @@ namespace wtf
   void Entity::update(const float dt)
   {}
 
-  void Entity::draw(sf::RenderTarget& target)
+  void Entity::draw(sf::RenderTarget& target) const
   {}
 
   void Entity::setActive(const bool active)
